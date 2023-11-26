@@ -8,5 +8,6 @@ body{
 }
 
 #board{
-    background-image: url(inn);
+    background-image:url(/inner-bg.png);
+    background-size: cover;
 }
