@@ -7,8 +7,8 @@ let context;
 
 //chara
 
-let charaWidth = 46;
-let charaHeight = 46;
+let charaWidth = 60;
+let charaHeight = 60;
 let charaX = boardWidth/2 - charaWidth/2;
 let charaY = boardHeight*7/8 - charaHeight;
 let charaRightImg;
@@ -47,7 +47,7 @@ window.onload = function() {
 
     //character gambar
     charaRightImg = new Image();
-    charaRightImg.src = './doodler-right.png';
+    charaRightImg.src = './character-img-kanan.png';
     chara.img = charaRightImg;
     charaRightImg.onload = function() {
         context.drawImage(chara.img, chara.x, chara.y, chara.width, chara.height);
@@ -60,7 +60,7 @@ window.onload = function() {
     placePlatform();
 
     charaLeftImg = new Image();
-    charaLeftImg.src = './doodler-left.png';
+    charaLeftImg.src = './character-img-kiri.png';
 
     requestAnimationFrame(update);
     document.addEventListener("keydown", moveChara);
@@ -91,7 +91,7 @@ window.onload = function() {
             let platform = platformArray[i];
 
             if(velocityY < 0 && chara.y < boardHeight*3/4){
-                platform.y -= -5;
+                platform.y -= -4;
             }
 
             if (detectCollision(chara, platform)){
@@ -151,7 +151,7 @@ window.onload = function() {
         let platform = {
             img : platformImg,
             x : boardWidth/2,
-            y : boardHeight - 50,
+            y : boardHeight - 140,
             width : platformWidth,
             height : platformHeight
         }
@@ -171,7 +171,7 @@ window.onload = function() {
             let platform = {
                 img : platformImg,
                 x : randomX,
-                y : boardHeight - 75 * i - 150,
+                y : boardHeight - 90 * i - 170,
                 width : platformWidth,
                 height : platformHeight
             }
