@@ -47,14 +47,14 @@ window.onload = function() {
 
     //character gambar
     charaRightImg = new Image();
-    charaRightImg.src = './character-img-right';
+    charaRightImg.src = './doodler-right.png';
     chara.img = charaRightImg;
     charaRightImg.onload = function() {
         context.drawImage(chara.img, chara.x, chara.y, chara.width, chara.height);
     }
 
     platformImg = new Image()
-    platformImg.src = './platform.png.gif'
+    platformImg.src = './platform.png'
     
     velocityY = initialVelocityY;
     placePlatform();
