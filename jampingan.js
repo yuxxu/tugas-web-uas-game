@@ -47,7 +47,7 @@ window.onload = function() {
 
     //character gambar
     charaRightImg = new Image();
-    charaRightImg.src = './doodler-right.png';
+    charaRightImg.src = './character-img-right.png';
     chara.img = charaRightImg;
     charaRightImg.onload = function() {
         context.drawImage(chara.img, chara.x, chara.y, chara.width, chara.height);
@@ -60,7 +60,7 @@ window.onload = function() {
     placePlatform();
 
     charaLeftImg = new Image();
-    charaLeftImg.src = './character-img-left.gif';
+    charaLeftImg.src = './character-img-left.png';
 
     requestAnimationFrame(update);
     document.addEventListener("keydown", moveChara);
