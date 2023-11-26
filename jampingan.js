@@ -47,20 +47,20 @@ window.onload = function() {
 
     //character gambar
     charaRightImg = new Image();
-    charaRightImg.src = './doodler-right.png';
+    charaRightImg.src = './character-img-right';
     chara.img = charaRightImg;
     charaRightImg.onload = function() {
         context.drawImage(chara.img, chara.x, chara.y, chara.width, chara.height);
     }
 
     platformImg = new Image()
-    platformImg.src = './platform.png'
+    platformImg.src = './platform.png.gif'
     
     velocityY = initialVelocityY;
     placePlatform();
 
     charaLeftImg = new Image();
-    charaLeftImg.src = './doodler-left.png';
+    charaLeftImg.src = './character-img-left.gif';
 
     requestAnimationFrame(update);
     document.addEventListener("keydown", moveChara);
